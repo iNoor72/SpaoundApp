@@ -91,6 +91,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="64P-c3-seT"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="g5D-SA-Wku" id="bNl-RG-1F7"/>
+                        <outlet property="nameTextField" destination="nIP-ut-lje" id="8wP-GD-jnL"/>
+                        <outlet property="nextButton" destination="DzD-sf-h2a" id="Al6-zG-djt"/>
+                        <outlet property="passwordTextField" destination="kn0-Fi-U34" id="XjJ-Ro-HEA"/>
+                        <outlet property="phoneNumberTextField" destination="qyK-A4-CyW" id="83V-Fu-3bZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8J-PZ-CNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,6 +175,21 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-Ey-qMD">
+                                <rect key="frame" x="16" y="816" width="382" height="36"/>
+                                <color key="backgroundColor" red="0.095640830699999999" green="0.19401523470000001" blue="0.63925236460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Fiq-JY-NJj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="ILC-Q3-LOL" eventType="touchUpInside" id="Rof-UN-WvM"/>
+                                    <action selector="signUpTapped:" destination="aEX-yj-VTf" eventType="touchUpInside" id="nQX-qr-jSL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="elg-0d-4yz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -178,11 +200,15 @@
                             <constraint firstItem="ocM-Ko-ovh" firstAttribute="centerX" secondItem="vbs-x2-cRV" secondAttribute="centerX" id="JIh-YS-FpX"/>
                             <constraint firstItem="ug5-t3-2ib" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="24" id="PDA-Uv-twh"/>
                             <constraint firstItem="9Mf-jo-ML2" firstAttribute="top" secondItem="elg-0d-4yz" secondAttribute="top" constant="20" id="Ptd-dT-aCg"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="bottom" secondItem="w2o-Ey-qMD" secondAttribute="bottom" constant="10" id="Qvy-RX-M75"/>
                             <constraint firstItem="ug5-t3-2ib" firstAttribute="top" secondItem="9Mf-jo-ML2" secondAttribute="bottom" constant="20" id="WZj-sk-xB9"/>
                             <constraint firstItem="vbs-x2-cRV" firstAttribute="top" secondItem="459-M6-MAS" secondAttribute="bottom" constant="32" id="We3-t1-w54"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="w2o-Ey-qMD" secondAttribute="trailing" constant="16" id="ZSr-FY-MqZ"/>
                             <constraint firstItem="ocM-Ko-ovh" firstAttribute="top" secondItem="vbs-x2-cRV" secondAttribute="bottom" constant="20" id="bEn-2z-46j"/>
                             <constraint firstItem="vbs-x2-cRV" firstAttribute="centerX" secondItem="459-M6-MAS" secondAttribute="centerX" id="bWH-eV-LIo"/>
                             <constraint firstItem="459-M6-MAS" firstAttribute="top" secondItem="ug5-t3-2ib" secondAttribute="bottom" constant="60" id="duO-KL-oFh"/>
+                            <constraint firstItem="w2o-Ey-qMD" firstAttribute="centerX" secondItem="pv5-a8-leK" secondAttribute="centerX" id="e1g-X5-9eq"/>
+                            <constraint firstItem="w2o-Ey-qMD" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="16" id="mLQ-2z-LkG"/>
                             <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="459-M6-MAS" secondAttribute="trailing" constant="40" id="v36-so-0jr"/>
                         </constraints>
                     </view>
@@ -224,6 +250,9 @@ and you’ll be able to reset your password.</string>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetTapped:" destination="ILC-Q3-LOL" eventType="touchUpInside" id="DCu-HR-8Ke"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email for recovery" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-VV-XM7">
                                 <rect key="frame" x="27" y="276.5" width="360" height="34"/>
@@ -250,6 +279,10 @@ and you’ll be able to reset your password.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cd6-IZ-5p6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="6kR-VV-XM7" id="udj-fj-Kcc"/>
+                        <outlet property="resetButton" destination="ZnR-zF-g0e" id="dqk-Cl-Wyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vet-xa-0Sk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -508,6 +541,9 @@ coming releases. Also there will be a lot of settings.</string>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="4Lp-i3-wne" eventType="touchUpInside" id="gOY-2i-mpd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kWl-te-Oj7"/>
@@ -530,6 +566,11 @@ coming releases. Also there will be a lot of settings.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vdx-Fe-XuM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Dhh-Rf-JRS" id="OO3-ad-Ace"/>
+                        <outlet property="loginButton" destination="kSZ-qM-3yx" id="H21-Nq-Ys2"/>
+                        <outlet property="passwordTextField" destination="3sC-fW-Qci" id="EMW-UD-i5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLx-7d-bXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -649,6 +690,9 @@ coming releases. Also there will be a lot of settings.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dZv-6v-v3Q"/>
+                    <connections>
+                        <outlet property="loginButton" destination="j2C-q2-FkP" id="EjV-jW-F63"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwm-Cg-tZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

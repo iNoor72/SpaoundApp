@@ -12,4 +12,6 @@ class VerificationViewController: UIViewController {
     override func viewDidLoad() {
     }
 
+    @IBAction func signUpTapped(_ sender: UIButton) {
+    }
 }
