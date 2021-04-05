@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>226973435349-6117oddd4ial9meb0q6lg3b6htpaso9n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.226973435349-6117oddd4ial9meb0q6lg3b6htpaso9n</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCA-SRL98Tx-vwWqCZyjiRYWlVVZw4V2BA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>226973435349</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>iNoor.SpaoundApp</string>
+	<key>PROJECT_ID</key>
+	<string>spaound-d6d6b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>spaound-d6d6b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:226973435349:ios:a418ea67395b2b19db295c</string>
+</dict>
+</plist>
