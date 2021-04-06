@@ -9,9 +9,12 @@ import UIKit
 
 class VerificationViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var createButton: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        createButton.layer.cornerRadius = 16.0
     }
 
     @IBAction func signUpTapped(_ sender: UIButton) {
     }
+    
 }

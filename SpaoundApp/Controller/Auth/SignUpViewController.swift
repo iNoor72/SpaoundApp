@@ -22,5 +22,10 @@ class SignUpViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 16.0
         nextButton.layer.cornerRadius = 16.0
     }
-
+    @IBAction func nextTapped(_ sender: UIButton) {
+        if nameTextField != nil, emailTextField != nil, passwordTextField != nil, phoneNumberTextField != nil {
+            //Check for syntax of each one of them
+        }
+    }
+    
 }
