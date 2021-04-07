@@ -29,6 +29,7 @@
 		7C89DF23261B940C00E1F38F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89DF22261B940C00E1F38F /* HomeViewController.swift */; };
 		7C8D454F261CDF0800F468BB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D454E261CDF0800F468BB /* SearchViewController.swift */; };
 		7C8D4552261CDF1100F468BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D4551261CDF1100F468BB /* ProfileViewController.swift */; };
+		7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3582E261E41C1003FF677 /* WorkingSpace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		7C89DF22261B940C00E1F38F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7C8D454E261CDF0800F468BB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7C8D4551261CDF1100F468BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7CA3582E261E41C1003FF677 /* WorkingSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSpace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				7C192AB7261CE2A5002432E5 /* User.swift */,
+				7CA3582E261E41C1003FF677 /* WorkingSpace.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				7C89DF1B261B8CB100E1F38F /* PasswordResetViewController.swift in Sources */,
 				7C8D454F261CDF0800F468BB /* SearchViewController.swift in Sources */,
 				7C096C9E261B874E00AAE54B /* AppDelegate.swift in Sources */,
+				7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */,
 				7C4562B8261BA0F2004550AF /* HomePageViewController.swift in Sources */,
 				7C89DF17261B8C8B00E1F38F /* SignUpViewController.swift in Sources */,
 				7C89DF23261B940C00E1F38F /* HomeViewController.swift in Sources */,

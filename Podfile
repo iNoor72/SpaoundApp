@@ -9,4 +9,5 @@ target 'SpaoundApp' do
 
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Alamofire', '~> 5.2'
 end

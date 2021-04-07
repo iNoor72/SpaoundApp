@@ -15,10 +15,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
+        collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CVCell")
     }
 
 }
 
+//MARK:- TableView Functions
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -32,13 +34,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+
+//MARK:- CollectionView Functions
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CVCell", for: indexPath) as! CustomCollectionViewCell
+        
+        cell.nameLabel.text = "Noor"
+        cell.priceLabel.text = "20"
+        return cell
     }
     
     

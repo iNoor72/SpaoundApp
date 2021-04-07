@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import Alamofire
 
-class Router {
+enum Router: URLRequestConvertible {
+    static var baseURL = {"localhost:3000"}
     
-    let baseURL = "localhost:3000"
+    func asURLRequest() throws -> URLRequest {
+        //Implement some code here
+        return URLRequest(url: (URL(string: "")!))
+    }
 }

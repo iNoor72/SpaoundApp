@@ -12,6 +12,7 @@ class User {
     var email: String
     var password: String
     var phoneNumber: String
+    var isLoggedIn: Bool = false
     
     init(name: String, email: String, password: String, phoneNumber: String) {
         self.name = name
