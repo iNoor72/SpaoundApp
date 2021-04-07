@@ -23,13 +23,14 @@ class HomeViewController: UIViewController {
 //MARK:- TableView Functions
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath) as! CustomTableViewCell
         cell.nameLabel.text = "Noor"
         cell.placeImage.image = UIImage(systemName: "home")
+        
         return cell
     }
 }
@@ -38,7 +39,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK:- CollectionView Functions
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
