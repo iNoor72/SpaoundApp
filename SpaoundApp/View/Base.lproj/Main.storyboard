@@ -107,7 +107,7 @@
         <!--Verification View Controller-->
         <scene sceneID="uNx-Gb-ehi">
             <objects>
-                <viewController id="aEX-yj-VTf" customClass="VerificationViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationViewController" id="aEX-yj-VTf" customClass="VerificationViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pv5-a8-leK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,7 +468,6 @@ coming releases. Also there will be a lot of settings.</string>
                                 </state>
                                 <connections>
                                     <action selector="signOutTapped:" destination="5y0-S2-xAF" eventType="touchUpInside" id="5mV-Yh-eyl"/>
-                                    <segue destination="oE3-zD-x5M" kind="show" id="qCO-WC-U28"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -671,7 +670,7 @@ coming releases. Also there will be a lot of settings.</string>
         <!--Navigation Controller-->
         <scene sceneID="Cid-on-4QY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XMQ-ev-wCi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Nav" automaticallyAdjustsScrollViewInsets="NO" id="XMQ-ev-wCi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dCm-0d-Khc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -689,7 +688,7 @@ coming releases. Also there will be a lot of settings.</string>
         <!--Home Page View Controller-->
         <scene sceneID="wPN-Fx-amP">
             <objects>
-                <viewController id="oE3-zD-x5M" customClass="HomePageViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePageVC" id="oE3-zD-x5M" customClass="HomePageViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4u-n5-XxX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -830,9 +829,6 @@ coming releases. Also there will be a lot of settings.</string>
             <point key="canvasLocation" x="4304" y="743"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="qCO-WC-U28"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo-Around-Outline" width="80" height="73"/>
         <image name="house.circle.fill" catalog="system" width="128" height="121"/>

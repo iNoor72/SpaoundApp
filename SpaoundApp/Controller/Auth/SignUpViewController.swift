@@ -22,18 +22,50 @@ class SignUpViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 16.0
         nextButton.layer.cornerRadius = 16.0
     }
+    
+    //It works, need to check for empty fields.
     @IBAction func nextTapped(_ sender: UIButton) {
-        if nameTextField != nil, emailTextField != nil, passwordTextField != nil, phoneNumberTextField != nil {
+        if let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text, let number = phoneNumberTextField.text, !email.isEmpty, !password.isEmpty, !name.isEmpty, !number.isEmpty {
             //Check for syntax of each one of them
-            
-            //Create a user after the checking
-            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (Result, Error) in
-                //Do something
+            if isValidInput(email: email, password: password, name: name, phone: number) {
+                
+                //Create a user after the checking
+                Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] result, error in
+                    guard error == nil else {
+                        let alert = UIAlertController(title: "Something went bad.", message: "Please check the data entered.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Return", style: .cancel, handler: { (action) in
+                        }))
+                        self?.present(alert, animated: true)
+                        return
+                    }
+                }
+                let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
+                
+                //Present the verification controllers with the data
+                
             }
-            let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
             
-            //Present the verification controllers
+            let alert = UIAlertController(title: "Wrong Data.", message: "You entered wrong data, please check entered data.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Return", style: .cancel, handler: { (action) in
+            }))
+            present(alert, animated: true)
         }
+    }
+    
+    func isValidInput(email: String, password: String, name: String, phone: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        
+        let passwordRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()\\-_=+{}|?>.<,:;~`’]{8,}$"
+        let passwordPred = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        
+        let namePred = NSPredicate(format: "SELF MATCHES %@", "^(([^ ]?)(^[a-zA-Z].*[a-zA-Z]$)([^ ]?))$")
+        
+        let phoneRegEx = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phonePred = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
+    
+        return emailPred.evaluate(with: email) && passwordPred.evaluate(with: password) && namePred.evaluate(with: name) && phonePred.evaluate(with: phone)
     }
     
 }

@@ -23,8 +23,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: UIButton) {
         
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        if let email = emailTextField.text, let password = passwordTextField.text, !email.isEmpty, !password.isEmpty {
+            Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+                //In case of failure in signing in.
+                guard error == nil
+                else{
+                    let alert = UIAlertController(title: "Signing in failed.", message: "Your email or password is wrong. Try again.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Return", style: .default, handler: { (action) in
+                    }))
+                    self?.present(alert, animated: true)
+                    return
+                }
             }
         }
     }

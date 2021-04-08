@@ -20,8 +20,14 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func signOutTapped(_ sender: UIButton) {
-        //Implement
-        //try Auth.auth().signOut()
-        //With error handling
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print("\(error)")
+        }
+        
+        //Need changing to make it better, not pop-off windows
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        self.present((storyboard?.instantiateViewController(withIdentifier: "HomePageVC")) as! HomePageViewController, animated: true, completion: nil)
     }
 }
