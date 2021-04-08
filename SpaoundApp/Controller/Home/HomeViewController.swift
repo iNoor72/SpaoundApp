@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -50,5 +50,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
+//MARK:- Fetching Data Functions
     
+    func fetchPopularSpaces() {
+        let url = Router.baseURL
+
+        //Make request with AF.request() method to fetch data.
+    }
+    
+    func fetchRecommendedSpaces() {
+        let url = Router.baseURL
+
+        //Make request with AF.request() method to fetch data.
+        
+    }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var signOutButton: UIButton!
@@ -19,5 +20,8 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func signOutTapped(_ sender: UIButton) {
+        //Implement
+        //try Auth.auth().signOut()
+        //With error handling
     }
 }

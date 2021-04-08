@@ -17,6 +17,13 @@ class PasswordResetViewController: UIViewController {
         resetButton.layer.cornerRadius = 16.0
     }
     @IBAction func resetTapped(_ sender: UIButton) {
+        if let email = emailTextField.text {
+            Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+                //Better style --> Make UIAlert with the error.
+                print("There was an error restoring your password, the error is \(error.debugDescription).")
+            }
+        }
+        
     }
     
 }

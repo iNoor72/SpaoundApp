@@ -25,6 +25,14 @@ class SignUpViewController: UIViewController {
     @IBAction func nextTapped(_ sender: UIButton) {
         if nameTextField != nil, emailTextField != nil, passwordTextField != nil, phoneNumberTextField != nil {
             //Check for syntax of each one of them
+            
+            //Create a user after the checking
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (Result, Error) in
+                //Do something
+            }
+            let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
+            
+            //Present the verification controllers
         }
     }
     

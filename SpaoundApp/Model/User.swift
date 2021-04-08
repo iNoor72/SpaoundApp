@@ -7,6 +7,8 @@
 
 import Foundation
 
+//Consider using CoreData
+
 class User {
     var name: String
     var email: String
