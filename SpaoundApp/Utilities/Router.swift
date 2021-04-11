@@ -10,7 +10,7 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     
-    static var baseURL = {"localhost:3000"}
+    static var baseURL = "http://localhost:3000"
     
     case popularPlaces
     case recommendedPlaces
@@ -24,8 +24,19 @@ enum Router: URLRequestConvertible {
         }
     }
     
+    var path: String {
+        switch self {
+        case .popularPlaces:
+            return "/popular"
+        case .recommendedPlaces:
+            return "/recommended"
+        }
+    }
+    
     func asURLRequest() throws -> URLRequest {
         //Implement some code here
-        return URLRequest(url: (URL(string: "")!))
+        var url = URL(string: Router.baseURL)
+        var request = URLRequest(url: (url?.appendingPathComponent(path))!)
+        return request
     }
 }

@@ -8,8 +8,16 @@
 import Foundation
 
 struct WorkingSpace: Codable {
-    let name: String
-    let price: Int
-    let address: String
-    let working_days: String
+    var places : [Place]
+}
+
+struct Place: Codable {
+    var name, address: String
+    var price: Int
+    var workingDays: String
+
+    enum CodingKeys: String, CodingKey {
+        case name, address, price
+        case workingDays = "working_days"
+    }
 }
