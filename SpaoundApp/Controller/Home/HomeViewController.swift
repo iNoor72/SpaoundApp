@@ -76,6 +76,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Needs some work
+        navigationController?.pushViewController(WorkingPlaceViewController(), animated: true)
+    }
 }
 
 

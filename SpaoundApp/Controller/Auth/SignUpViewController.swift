@@ -29,7 +29,7 @@ class SignUpViewController: UIViewController {
             //Check for syntax of each one of them
             if isValidInput(email: email, password: password, name: name, phone: number) {
                 
-                //Create a user after the checking
+                //Create a user after the checking, it must be sent to the verify screen
                 Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] result, error in
                     guard error == nil else {
                         let alert = UIAlertController(title: "Something went bad.", message: "Please check the data entered.", preferredStyle: .alert)
@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
                 let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
                 
                 //Present the verification controllers with the data
-                
+        
             }
             
             let alert = UIAlertController(title: "Wrong Data.", message: "You entered wrong data, please check entered data.", preferredStyle: .alert)

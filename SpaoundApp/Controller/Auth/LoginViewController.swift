@@ -36,6 +36,9 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    
+        //realm user to be signedIn
+        //realm.getObject().isLogged = true
     }
     
 

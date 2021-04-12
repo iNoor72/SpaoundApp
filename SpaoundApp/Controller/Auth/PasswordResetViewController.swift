@@ -18,9 +18,12 @@ class PasswordResetViewController: UIViewController {
     }
     @IBAction func resetTapped(_ sender: UIButton) {
         if let email = emailTextField.text {
-            Auth.auth().sendPasswordReset(withEmail: email) { (error) in
-                //Better style --> Make UIAlert with the error.
-                print("There was an error restoring your password, the error is \(error.debugDescription).")
+            Auth.auth().sendPasswordReset(withEmail: email) { [weak self] (error) in
+                let alert = UIAlertController(title: "Something Wrong happend.", message: "There was an error with your email, please enter your email again.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Return", style: .cancel) { action in
+                    print("There was an error restoring your password, the error is \(error.debugDescription).")
+                }
+                
             }
         }
         

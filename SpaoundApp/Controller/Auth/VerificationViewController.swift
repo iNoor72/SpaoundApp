@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class VerificationViewController: UIViewController {
 
@@ -15,6 +16,9 @@ class VerificationViewController: UIViewController {
     }
 
     @IBAction func signUpTapped(_ sender: UIButton) {
+        //implement the signup for user here with data passed from signup screen
+        
+        User(name: "", email: "", password: "", phoneNumber: "")
     }
     
 }
