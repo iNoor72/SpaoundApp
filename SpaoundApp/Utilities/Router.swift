@@ -35,8 +35,8 @@ enum Router: URLRequestConvertible {
     
     func asURLRequest() throws -> URLRequest {
         //Implement some code here
-        var url = URL(string: Router.baseURL)
-        var request = URLRequest(url: (url?.appendingPathComponent(path))!)
+        let url = URL(string: Router.baseURL)
+        let request = URLRequest(url: (url?.appendingPathComponent(path))!)
         return request
     }
 }

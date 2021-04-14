@@ -32,7 +32,9 @@ class HomeViewController: UIViewController {
                 print("succes")
                 print(data)
                 self?.popularWorkingSpaces = data
-                self?.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
                 
             case .failure(let error):
                 print("error with network")
@@ -48,7 +50,10 @@ class HomeViewController: UIViewController {
             switch response.result {
             case .success(let data):
                 self?.recommendedWorkingSpaces = data
-                self?.collectionView.reloadData()
+                
+                DispatchQueue.main.async {
+                    self?.collectionView.reloadData()
+                }
                 
             case .failure(let error):
                 print("error with network")
