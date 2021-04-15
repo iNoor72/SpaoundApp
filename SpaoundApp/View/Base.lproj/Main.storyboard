@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tei-or-va0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K36-9L-eur">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -627,29 +627,28 @@ coming releases. Also there will be a lot of settings.</string>
             </objects>
             <point key="canvasLocation" x="5249" y="1562"/>
         </scene>
-        <!--Main View Controller-->
+        <!--On Boarding View Controller-->
         <scene sceneID="i1M-LZ-rco">
             <objects>
-                <viewController id="K36-9L-eur" customClass="MainViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K36-9L-eur" customClass="OnBoardingViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVZ-Pf-gUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vrj-3R-Ybh">
-                                <rect key="frame" x="20" y="91" width="374" height="684"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vrj-3R-Ybh">
+                                <rect key="frame" x="20" y="90" width="374" height="684"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WNF-Cd-fr0">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WNF-Cd-fr0">
+                                    <size key="itemSize" width="220" height="370"/>
+                                    <size key="estimatedItemSize" width="374" height="684"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-NS-lpa">
-                                <rect key="frame" x="195" y="809" width="43" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-NS-lpa">
+                                <rect key="frame" x="100" y="806" width="214" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.095640830699999999" green="0.19401523470000001" blue="0.63925236460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -658,9 +657,8 @@ coming releases. Also there will be a lot of settings.</string>
                                     <action selector="nextPressed:" destination="K36-9L-eur" eventType="touchUpInside" id="LeN-Mn-CSI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXf-Ze-vzb">
-                                <rect key="frame" x="349" y="44" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXf-Ze-vzb">
+                                <rect key="frame" x="348" y="44" width="30" height="30"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
                                     <action selector="skipPressed:" destination="K36-9L-eur" eventType="touchUpInside" id="8h2-fl-TPT"/>
@@ -669,6 +667,19 @@ coming releases. Also there will be a lot of settings.</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WnF-ny-6W7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WnF-ny-6W7" firstAttribute="bottom" secondItem="A8o-NS-lpa" secondAttribute="bottom" constant="16" id="4kB-8m-OE7"/>
+                            <constraint firstItem="nXf-Ze-vzb" firstAttribute="top" secondItem="WnF-ny-6W7" secondAttribute="top" id="A7z-hk-suf"/>
+                            <constraint firstItem="WnF-ny-6W7" firstAttribute="trailing" secondItem="A8o-NS-lpa" secondAttribute="trailing" constant="100" id="CLT-6M-j6j"/>
+                            <constraint firstItem="A8o-NS-lpa" firstAttribute="top" secondItem="Vrj-3R-Ybh" secondAttribute="bottom" constant="32" id="Cpv-ko-RNg"/>
+                            <constraint firstItem="Vrj-3R-Ybh" firstAttribute="top" secondItem="nXf-Ze-vzb" secondAttribute="bottom" constant="16" id="OZv-zZ-fXa"/>
+                            <constraint firstItem="WnF-ny-6W7" firstAttribute="trailing" secondItem="Vrj-3R-Ybh" secondAttribute="trailing" constant="20" id="QyG-cH-Oj5"/>
+                            <constraint firstItem="WnF-ny-6W7" firstAttribute="trailing" secondItem="nXf-Ze-vzb" secondAttribute="trailing" constant="36" id="d4A-zK-86r"/>
+                            <constraint firstItem="A8o-NS-lpa" firstAttribute="top" secondItem="Vrj-3R-Ybh" secondAttribute="bottom" constant="32" id="fob-5Y-VZY"/>
+                            <constraint firstItem="Vrj-3R-Ybh" firstAttribute="leading" secondItem="WnF-ny-6W7" secondAttribute="leading" constant="20" id="g3I-ty-Zgi"/>
+                            <constraint firstItem="A8o-NS-lpa" firstAttribute="leading" secondItem="WnF-ny-6W7" secondAttribute="leading" constant="100" id="hrJ-yF-ZrM"/>
+                            <constraint firstItem="Vrj-3R-Ybh" firstAttribute="top" secondItem="nXf-Ze-vzb" secondAttribute="bottom" constant="16" id="jql-fn-0yN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Vrj-3R-Ybh" id="yTD-Pl-5eM"/>
