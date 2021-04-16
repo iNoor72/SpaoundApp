@@ -22,6 +22,8 @@
 		7C192AC6261CE70D002432E5 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C192AC4261CE70D002432E5 /* CustomTableViewCell.swift */; };
 		7C192AC7261CE70D002432E5 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C192AC5261CE70D002432E5 /* CustomTableViewCell.xib */; };
 		7C4562B8261BA0F2004550AF /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4562B7261BA0F2004550AF /* HomePageViewController.swift */; };
+		7C49339A262A0D6B00A8C3CC /* OnBoardingViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C493399262A0D6B00A8C3CC /* OnBoardingViewController2.swift */; };
+		7C49339D262A0D7500A8C3CC /* OnBoardingViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C49339C262A0D7500A8C3CC /* OnBoardingViewController3.swift */; };
 		7C89DF0F261B8A4400E1F38F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C89DF0E261B8A4400E1F38F /* GoogleService-Info.plist */; };
 		7C89DF17261B8C8B00E1F38F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89DF16261B8C8B00E1F38F /* SignUpViewController.swift */; };
 		7C89DF1B261B8CB100E1F38F /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89DF1A261B8CB100E1F38F /* PasswordResetViewController.swift */; };
@@ -31,8 +33,6 @@
 		7C8D4552261CDF1100F468BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D4551261CDF1100F468BB /* ProfileViewController.swift */; };
 		7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3582E261E41C1003FF677 /* WorkingSpace.swift */; };
 		7CD245C826237FD700CB74DD /* WorkingPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD245C726237FD700CB74DD /* WorkingPlaceViewController.swift */; };
-		7CF3D0662627946500E19DC2 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF3D0642627946500E19DC2 /* OnBoardingCell.swift */; };
-		7CF3D0672627946500E19DC2 /* OnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF3D0652627946500E19DC2 /* OnBoardingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +55,8 @@
 		7C192AC4261CE70D002432E5 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		7C192AC5261CE70D002432E5 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		7C4562B7261BA0F2004550AF /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		7C493399262A0D6B00A8C3CC /* OnBoardingViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController2.swift; sourceTree = "<group>"; };
+		7C49339C262A0D7500A8C3CC /* OnBoardingViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController3.swift; sourceTree = "<group>"; };
 		7C89DF0E261B8A4400E1F38F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C89DF16261B8C8B00E1F38F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7C89DF1A261B8CB100E1F38F /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +66,6 @@
 		7C8D4551261CDF1100F468BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7CA3582E261E41C1003FF677 /* WorkingSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSpace.swift; sourceTree = "<group>"; };
 		7CD245C726237FD700CB74DD /* WorkingPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingPlaceViewController.swift; sourceTree = "<group>"; };
-		7CF3D0642627946500E19DC2 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
-		7CF3D0652627946500E19DC2 /* OnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				7C192AB0261CE13D002432E5 /* OnBoardingViewController.swift */,
+				7C493399262A0D6B00A8C3CC /* OnBoardingViewController2.swift */,
+				7C49339C262A0D7500A8C3CC /* OnBoardingViewController3.swift */,
 			);
 			path = "Main View";
 			sourceTree = "<group>";
@@ -150,8 +152,6 @@
 				7C192ABF261CE63D002432E5 /* CustomCollectionViewCell.xib */,
 				7C192AC4261CE70D002432E5 /* CustomTableViewCell.swift */,
 				7C192AC5261CE70D002432E5 /* CustomTableViewCell.xib */,
-				7CF3D0642627946500E19DC2 /* OnBoardingCell.swift */,
-				7CF3D0652627946500E19DC2 /* OnBoardingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,7 +265,6 @@
 			files = (
 				7C89DF0F261B8A4400E1F38F /* GoogleService-Info.plist in Resources */,
 				7C096CAA261B874E00AAE54B /* LaunchScreen.storyboard in Resources */,
-				7CF3D0672627946500E19DC2 /* OnBoardingCell.xib in Resources */,
 				7C192AC7261CE70D002432E5 /* CustomTableViewCell.xib in Resources */,
 				7C096CA7261B874E00AAE54B /* Assets.xcassets in Resources */,
 				7C192AC1261CE63D002432E5 /* CustomCollectionViewCell.xib in Resources */,
@@ -330,15 +329,16 @@
 				7C8D4552261CDF1100F468BB /* ProfileViewController.swift in Sources */,
 				7C192AC6261CE70D002432E5 /* CustomTableViewCell.swift in Sources */,
 				7C89DF1B261B8CB100E1F38F /* PasswordResetViewController.swift in Sources */,
+				7C49339A262A0D6B00A8C3CC /* OnBoardingViewController2.swift in Sources */,
 				7C8D454F261CDF0800F468BB /* SearchViewController.swift in Sources */,
 				7C096C9E261B874E00AAE54B /* AppDelegate.swift in Sources */,
 				7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */,
 				7C4562B8261BA0F2004550AF /* HomePageViewController.swift in Sources */,
 				7CD245C826237FD700CB74DD /* WorkingPlaceViewController.swift in Sources */,
+				7C49339D262A0D7500A8C3CC /* OnBoardingViewController3.swift in Sources */,
 				7C89DF17261B8C8B00E1F38F /* SignUpViewController.swift in Sources */,
 				7C89DF23261B940C00E1F38F /* HomeViewController.swift in Sources */,
 				7C096CA0261B874E00AAE54B /* SceneDelegate.swift in Sources */,
-				7CF3D0662627946500E19DC2 /* OnBoardingCell.swift in Sources */,
 				7C192ABC261CE383002432E5 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
