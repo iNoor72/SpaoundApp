@@ -85,6 +85,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Needs some work
         navigationController?.pushViewController(WorkingPlaceViewController(), animated: true)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "ShowDetails" {
+                let destination = segue.destination as! WorkingPlaceViewController
+                destination.nameLabel.text = ""
+                destination.priceButton.titleLabel?.text = ""
+                destination.workingSpaceImage.image = UIImage()
+                destination.normalPriceLabel.text = "" //Cell price
+                destination.meetingPriceLabel.text = "" //Cell price * 2
+                destination.smallPriceLabel.text = "" //Cell price * 0.8
+                
+            }
+        }
     }
 }
 

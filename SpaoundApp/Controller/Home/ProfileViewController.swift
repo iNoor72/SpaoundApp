@@ -14,8 +14,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    //let signInUser = realm.getUser()
+    
     override func viewDidLoad() {
         signOutButton.layer.cornerRadius = 16.0
+        //phoneLabel.text = user.phoneNumber
+        //usernameLabel.text = user.username
+        //profileImage.image = user.image
 
     }
 

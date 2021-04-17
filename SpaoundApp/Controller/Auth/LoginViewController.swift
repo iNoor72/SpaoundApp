@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
                 guard error == nil
                 else{
                     let alert = UIAlertController(title: "Signing in failed.", message: "Your email or password is wrong. Try again.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Return", style: .default, handler: { (action) in
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { (action) in
                     }))
                     self?.present(alert, animated: true)
                     return

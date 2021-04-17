@@ -8,15 +8,17 @@
 import UIKit
 
 class WorkingPlaceViewController: UIViewController {
-    @IBOutlet var workingImage: UIImageView!
-    @IBOutlet var bookingButton: UIButton!
+    @IBOutlet weak var workingSpaceImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceButton: UIButton!
+    @IBOutlet weak var normalPriceLabel: UILabel!
+    @IBOutlet weak var meetingPriceLabel: UILabel!
+    @IBOutlet weak var smallPriceLabel: UILabel!
     
     var workingSpaceData: WorkingSpace?
     
     override func viewDidLoad() {
-        //scrollView.alwaysBounceVertical = true
-//        scrollView.showsHorizontalScrollIndicator = false
-        bookingButton.layer.cornerRadius = 16.0
+        priceButton.layer.cornerRadius = 16.0
     }
 
     @IBAction func bookingBottonTapped(_ sender: UIButton) {

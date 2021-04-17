@@ -25,9 +25,11 @@ class SignUpViewController: UIViewController {
     
     //It works, need to check for empty fields.
     @IBAction func nextTapped(_ sender: UIButton) {
-        if let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text, let number = phoneNumberTextField.text, !email.isEmpty, !password.isEmpty, !name.isEmpty, !number.isEmpty {
+        if let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text, let number = phoneNumberTextField.text, !(emailTextField.text?.isEmpty ?? true), !(nameTextField.text?.isEmpty ?? true), !(passwordTextField.text?.isEmpty ?? true), !(phoneNumberTextField.text?.isEmpty ?? true) {
+            
             //Check for syntax of each one of them
             if isValidInput(email: email, password: password, name: name, phone: number) {
+                
                 //Create a user after the checking, it must be sent to the verify screen
                 Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] result, error in
                     guard error == nil else {
@@ -37,7 +39,7 @@ class SignUpViewController: UIViewController {
                         return
                     }
                 }
-//                let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
+                //                let user = User(name: nameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, phoneNumber: phoneNumberTextField.text!)
                 
                 //Present the verification controllers with the data
                 
@@ -60,6 +62,8 @@ class SignUpViewController: UIViewController {
     }
     
     func isValidInput(email: String, password: String, name: String, phone: String) -> Bool {
+        
+        //Check using Regular expressions
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
@@ -69,10 +73,20 @@ class SignUpViewController: UIViewController {
         
         let namePred = NSPredicate(format: "SELF MATCHES %@", "^(([^ ]?)(^[a-zA-Z].*[a-zA-Z]$)([^ ]?))$")
         
-        let phoneRegEx = "^\\d{3}-\\d{3}-\\d{4}$"
-        let phonePred = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
-    
-        return emailPred.evaluate(with: email) && passwordPred.evaluate(with: password) && namePred.evaluate(with: name) && phonePred.evaluate(with: phone)
+        //        let phoneRegEx = "^\\d{3}-\\d{3}-\\d{4}$"
+        //        let phonePred = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
+        
+        //Check using computed values
+        var result: Bool {
+            if !phone.isEmpty, phone.count == 10, phone.starts(with: "1") {
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        
+        return emailPred.evaluate(with: email) && passwordPred.evaluate(with: password) && namePred.evaluate(with: name) && result
     }
     
 }
