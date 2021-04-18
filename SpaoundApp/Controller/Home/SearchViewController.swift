@@ -11,12 +11,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var workingSpaceData: WorkingSpace?
+    var workingSpaceData: Place?
+    var matchingWorkingSpaces: WorkingSpace?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -29,12 +32,17 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        print("\(matchingWorkingSpaces?.places.count ?? 0)")
+        return matchingWorkingSpaces?.places.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath) as! CustomTableViewCell
         //Maybe using Realm to fetch data, or maybe using the API call again
+        
+        cell.nameLabel.text = matchingWorkingSpaces?.places[indexPath.row].name
+        cell.addressLabel.text = matchingWorkingSpaces?.places[indexPath.row].address
+        cell.priceLabel.text = "\(matchingWorkingSpaces?.places[indexPath.row].price ?? 0)"
         
         return cell
     }
@@ -43,15 +51,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         //Needs some work
         
         let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
-        
-        destination.nameLabel.text = workingSpaceData?.places[indexPath.row].name
-        destination.priceButton.titleLabel?.text = workingSpaceData?.places[indexPath.row].address
-        
-        let price = Double(workingSpaceData?.places[indexPath.row].price ?? 0)
-        destination.normalPriceLabel.text = String(format: "%.2f", "\(price)") //Cell price
-        destination.meetingPriceLabel.text = String(format: "%.2f", "\(price * 2)") //Cell price * 2
-        destination.smallPriceLabel.text = String(format: "%.2f", "\(price * 0.8)")//Cell price * 0.8
-
+        destination.workingSpaceData = self.workingSpaceData
         navigationController?.pushViewController(destination, animated: true)
     }
     

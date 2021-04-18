@@ -18,11 +18,13 @@ class SignUpViewController: UIViewController {
     var validator = Validator()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         nameTextField.layer.cornerRadius = 16.0
         emailTextField.layer.cornerRadius = 16.0
         phoneNumberTextField.layer.cornerRadius = 16.0
         passwordTextField.layer.cornerRadius = 16.0
         nextButton.layer.cornerRadius = 16.0
+        //navigationController?.isNavigationBarHidden = false
     }
     
     //It works, need to check for empty fields.

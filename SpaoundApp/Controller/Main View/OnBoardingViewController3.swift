@@ -15,6 +15,7 @@ class OnBoardingViewController3: UIViewController {
         getStartedButton.layer.cornerRadius = 16.0
     }
     @IBAction func getStartedTapped(_ sender: UIButton) {
-        //Navigate to AuthVC with new NavController
+        let destination = storyboard?.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController
+        navigationController?.pushViewController(destination, animated: true)
     }
 }

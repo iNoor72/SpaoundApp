@@ -595,7 +595,7 @@ and you’ll be able to reset your password.</string>
         <!--Find-->
         <scene sceneID="9R5-Uk-saJ">
             <objects>
-                <viewController id="oFm-EO-X6F" customClass="SearchViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="oFm-EO-X6F" customClass="SearchViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PLH-TT-7v9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

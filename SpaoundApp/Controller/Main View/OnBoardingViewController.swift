@@ -20,5 +20,7 @@ class OnBoardingViewController: UIViewController {
     
     
     @IBAction func skipTapped(_ sender: UIBarButtonItem) {
+        let destination = storyboard?.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController
+        navigationController?.pushViewController(destination, animated: true)
     }
 }

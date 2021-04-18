@@ -8,8 +8,8 @@
 import UIKit
 import FirebaseAuth
 
-class VerificationViewController: UIViewController {
-    
+class VerificationViewController: UIViewController, UITextFieldDelegate {
+    //Delegates of the textFields
     var name: String?
     var email: String?
     var password: String?
@@ -18,13 +18,24 @@ class VerificationViewController: UIViewController {
     @IBOutlet weak var secondDigit: UITextField!
     @IBOutlet weak var thirdDigit: UITextField!
     @IBOutlet weak var fourthDigit: UITextField!
-    
-    
     @IBOutlet weak var createButton: UIButton!
-    override func viewWillAppear(_ animated: Bool) {
-        createButton.layer.cornerRadius = 16.0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createButton.layer.cornerRadius = 16.0
+        firstDigit.delegate = self
+        //navigationController?.isNavigationBarHidden = false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if firstDigit.text!.count == 1 {
+            //Go to the second textfield
+        }
+    }
 
     @IBAction func signUpTapped(_ sender: UIButton) {
         //implement the signup for user here with data passed from signup screen

@@ -15,13 +15,17 @@ class HomeViewController: UIViewController {
     
     var popularWorkingSpaces : WorkingSpace?
     var recommendedWorkingSpaces : WorkingSpace?
+    var allWorkingSpaces: WorkingSpace = WorkingSpace(places: [Place]())
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CVCell")
+        navigationController?.isNavigationBarHidden = true
         
         fetchPopularSpaces()
         fetchRecommendedSpaces()
+        //setAllWorkingSpacesData()
     }
     
     //MARK:- Fetching functions
@@ -33,6 +37,8 @@ class HomeViewController: UIViewController {
                 print("succes")
                 print(data)
                 self?.popularWorkingSpaces = data
+                self?.allWorkingSpaces.places.append(contentsOf: data.places)
+                
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -43,13 +49,15 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
+    
     func fetchRecommendedSpaces() {
         let url = Router.recommendedPlaces
         AF.request(url).responseDecodable { [weak self] (response: (DataResponse<WorkingSpace, AFError>)) in
             switch response.result {
             case .success(let data):
                 self?.recommendedWorkingSpaces = data
+                self?.allWorkingSpaces.places.append(contentsOf: data.places)
+                self?.setAllWorkingSpacesData()
                 
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()
@@ -61,7 +69,20 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    func setAllWorkingSpacesData() {
+//        guard allWorkingSpaces != nil else {
+//            return
+////        }
+        let destination = storyboard?.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
+        destination.matchingWorkingSpaces = allWorkingSpaces
+        tabBarController?.present(destination, animated: true, completion: nil)
+//        for i in 0...allWorkingSpaces.places.count-1 {
+//            print("\(allWorkingSpaces.places[i].name)")
+//        }
+    }
 }
+
 
 
 

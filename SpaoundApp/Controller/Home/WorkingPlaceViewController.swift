@@ -27,6 +27,7 @@ class WorkingPlaceViewController: UIViewController {
         smallPriceLabel.text = "- L.E \(price*0.8)/ 1 Day (8 Hours)"
         meetingPriceLabel.text = "- L.E \(price*2)/ 1 Day (8 Hours)"
         normalPriceLabel.text = "- L.E \(price)/ 1 Day (8 Hours)"
+        navigationController?.isNavigationBarHidden = false
     }
 
     @IBAction func bookingBottonTapped(_ sender: UIButton) {

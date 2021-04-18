@@ -11,11 +11,14 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
-//        loginButton.layer.cornerRadius = 16.0
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loginButton.layer.cornerRadius = 16.0
     }
+    
+    
 
 }

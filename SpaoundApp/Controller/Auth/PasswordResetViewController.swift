@@ -13,8 +13,10 @@ class PasswordResetViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         emailTextField.layer.cornerRadius = 16.0
         resetButton.layer.cornerRadius = 16.0
+        //navigationController?.isNavigationBarHidden = false
     }
     @IBAction func resetTapped(_ sender: UIButton) {
         if let email = emailTextField.text {
@@ -26,6 +28,10 @@ class PasswordResetViewController: UIViewController {
                 
             }
         }
+        
+        let destination = storyboard?.instantiateViewController(identifier: "") as! HomePageViewController
+        destination.navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(destination, animated: true)
         
     }
     

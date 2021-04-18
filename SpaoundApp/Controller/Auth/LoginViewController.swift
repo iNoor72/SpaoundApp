@@ -15,9 +15,11 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         emailTextField.layer.cornerRadius = 16.0
         passwordTextField.layer.cornerRadius = 16.0
         loginButton.layer.cornerRadius = 16.0
+        //navigationController?.isNavigationBarHidden = false
     }
     
     
@@ -36,6 +38,8 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+        
+        UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
     
         //realm user to be signedIn
         //realm.getObject().isLogged = true

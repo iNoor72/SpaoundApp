@@ -7,87 +7,183 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BF055840-27D7-49ED-ADBC-DF40940B16EC"
+            uuid = "010C375F-CBF4-4362-9DD1-447E3BE383C8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "setAllWorkingSpacesData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6D3D138E-1972-466E-AACE-F5E70014066E"
+            uuid = "BFC33B29-6606-4445-ABD3-2045B642A39A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "fetchRecommendedSpaces()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6B856B6A-DE3D-4B89-96FE-3CFF53A01BC9"
+            uuid = "E66E0283-9978-428F-9F14-6E7A9AF6CD40"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchRecommendedSpaces()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E66E0283-9978-428F-9F14-6E7A9AF6CD40 - ab8502c92f4c1abb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchRecommendedSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1266">
+               </Location>
+               <Location
+                  uuid = "E66E0283-9978-428F-9F14-6E7A9AF6CD40 - 9cb34de2adbc25ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchRecommendedSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7859B193-7F4E-43EC-A2CE-41383E51C8EE"
+            uuid = "CCB2DAB1-A742-41D0-B769-FF1567AFF7FB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "fetchRecommendedSpaces()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CCB2DAB1-A742-41D0-B769-FF1567AFF7FB - ab8502c92f4c1abb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchRecommendedSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1333">
+               </Location>
+               <Location
+                  uuid = "CCB2DAB1-A742-41D0-B769-FF1567AFF7FB - 9cb34de2adbc25ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchRecommendedSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "168C0771-9686-4BE6-BD97-4FE2375668F6"
+            uuid = "D89FD4B2-5604-47AD-BCA8-6C00C867CD7C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchPopularSpaces()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D89FD4B2-5604-47AD-BCA8-6C00C867CD7C - 51480d1184babd92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchPopularSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1453">
+               </Location>
+               <Location
+                  uuid = "D89FD4B2-5604-47AD-BCA8-6C00C867CD7C - 3b09d5b69414759"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;SpaoundApp.WorkingSpace, Alamofire.AFError&gt;) -&gt; () in SpaoundApp.HomeViewController.fetchPopularSpaces() -&gt; ()"
+                  moduleName = "SpaoundApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noor/Desktop/SwiftyCamp/Toy%20Problems/Projects/SpaoundApp/SpaoundApp/Controller/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5367962B-8EC0-4E5E-9F25-375F60768A1A"
+            uuid = "00ADE03E-FFCF-46B8-A58F-0DFCAF5DAAC6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -96,46 +192,30 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "setAllWorkingSpacesData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2A92E0D7-45C0-4C46-9A69-6C237FAC107D"
+            uuid = "B216C6F6-7966-4A02-A265-82DD8804886F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "setAllWorkingSpacesData()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7004E7C9-8A9E-4871-9240-A66F004CA87F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B64DEBD1-FE9C-44A8-9EE4-84D46D45E3EC"
+            uuid = "7E64D38E-5B7E-42DF-A45F-954FB2022B98"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -144,56 +224,24 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "setAllWorkingSpacesData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79741F79-38AD-4E4E-BC77-7E83739151B0"
+            uuid = "7BA3A50A-30A9-4D9D-83AA-4575AD441071"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
+            filePath = "SpaoundApp/Controller/Home/SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3F1283EB-0EF4-4585-854B-FCEFD10C4ADB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9B30F30-B6AC-467C-88A0-7C5D6BA5AC6A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SpaoundApp/Controller/Home/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "HomeViewController"
-            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
