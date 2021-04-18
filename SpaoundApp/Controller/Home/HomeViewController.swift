@@ -83,17 +83,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Needs some work
         let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
-        destination.workingSpaceData = popularWorkingSpaces
-        destination.nameLabel.text = popularWorkingSpaces?.places[indexPath.row].name
-        destination.priceButton.titleLabel?.text = popularWorkingSpaces?.places[indexPath.row].address
-        
-        let price = Double(popularWorkingSpaces?.places[indexPath.row].price ?? 0)
-        destination.normalPriceLabel.text = String(format: "%.2f", "\(price)") //Cell price
-        destination.meetingPriceLabel.text = String(format: "%.2f", "\(price * 2)") //Cell price * 2
-        destination.smallPriceLabel.text = String(format: "%.2f", "\(price * 0.8)")//Cell price * 0.8
-
+        destination.workingSpaceData = popularWorkingSpaces?.places[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
         
     }
@@ -115,6 +106,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.secondFeatureLabel.text = "Comfort"
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
+        destination.workingSpaceData = recommendedWorkingSpaces?.places[indexPath.row]
+        navigationController?.pushViewController(destination, animated: true)
     }
     
 }

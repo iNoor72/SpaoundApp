@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oFm-EO-X6F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tei-or-va0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -323,31 +322,22 @@ and you’ll be able to reset your password.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Spaces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-VC-rij">
-                                <rect key="frame" x="24" y="462" width="137" height="28"/>
+                                <rect key="frame" x="16" y="402" width="137" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="obF-vC-9f1">
-                                <rect key="frame" x="0.0" y="506" width="414" height="307"/>
+                                <rect key="frame" x="0.0" y="430" width="414" height="383"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fbt-p1-RLj">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fbt-p1-RLj" id="lug-RI-4Jd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="C2y-Yr-leo" id="iHq-XA-OX5"/>
                                     <outlet property="delegate" destination="C2y-Yr-leo" id="jyO-bI-ydP"/>
                                 </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z8h-7Q-Rjz">
-                                <rect key="frame" x="24" y="298" width="370" height="128"/>
+                                <rect key="frame" x="8" y="250" width="398" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="tIh-ry-Hrk"/>
                                 </constraints>
@@ -357,16 +347,7 @@ and you’ll be able to reset your password.</string>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N4W-AP-RmF">
-                                        <rect key="frame" x="0.0" y="0.0" width="185" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lpn-HN-wU1">
-                                            <rect key="frame" x="0.0" y="0.0" width="185" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="C2y-Yr-leo" id="O8Y-nu-j08"/>
                                     <outlet property="delegate" destination="C2y-Yr-leo" id="H8I-zu-IIB"/>
@@ -378,17 +359,17 @@ and you’ll be able to reset your password.</string>
                         <constraints>
                             <constraint firstItem="ZiF-2t-phq" firstAttribute="top" secondItem="pHM-VG-WFD" secondAttribute="bottom" constant="16" id="5cc-9S-z93"/>
                             <constraint firstItem="ZiF-2t-phq" firstAttribute="leading" secondItem="pHM-VG-WFD" secondAttribute="leading" id="5vG-Kb-bqx"/>
-                            <constraint firstItem="SCT-VC-rij" firstAttribute="top" secondItem="z8h-7Q-Rjz" secondAttribute="bottom" constant="36" id="6zZ-YN-hiN"/>
+                            <constraint firstItem="SCT-VC-rij" firstAttribute="top" secondItem="z8h-7Q-Rjz" secondAttribute="bottom" constant="24" id="6zZ-YN-hiN"/>
                             <constraint firstItem="pHM-VG-WFD" firstAttribute="top" secondItem="7uN-Q7-VJO" secondAttribute="top" constant="20" id="BGr-0E-ia0"/>
                             <constraint firstItem="uRj-i8-N74" firstAttribute="top" secondItem="ZiF-2t-phq" secondAttribute="bottom" constant="36" id="BNY-sX-AFb"/>
-                            <constraint firstItem="SCT-VC-rij" firstAttribute="leading" secondItem="z8h-7Q-Rjz" secondAttribute="leading" id="Gmt-R7-ia1"/>
-                            <constraint firstItem="obF-vC-9f1" firstAttribute="top" secondItem="SCT-VC-rij" secondAttribute="bottom" constant="16" id="M00-f1-pkK"/>
-                            <constraint firstItem="z8h-7Q-Rjz" firstAttribute="top" secondItem="uRj-i8-N74" secondAttribute="bottom" constant="48" id="MZd-YI-3uj"/>
+                            <constraint firstItem="SCT-VC-rij" firstAttribute="leading" secondItem="z8h-7Q-Rjz" secondAttribute="leading" constant="8" id="Gmt-R7-ia1"/>
+                            <constraint firstItem="obF-vC-9f1" firstAttribute="top" secondItem="SCT-VC-rij" secondAttribute="bottom" id="M00-f1-pkK"/>
+                            <constraint firstItem="z8h-7Q-Rjz" firstAttribute="top" secondItem="uRj-i8-N74" secondAttribute="bottom" id="MZd-YI-3uj"/>
                             <constraint firstItem="obF-vC-9f1" firstAttribute="trailing" secondItem="7uN-Q7-VJO" secondAttribute="trailing" id="Pqh-qc-hbE"/>
                             <constraint firstItem="7uN-Q7-VJO" firstAttribute="bottom" secondItem="obF-vC-9f1" secondAttribute="bottom" id="f08-tX-y9r"/>
                             <constraint firstItem="uRj-i8-N74" firstAttribute="leading" secondItem="ZiF-2t-phq" secondAttribute="leading" id="mma-iu-cbg"/>
-                            <constraint firstItem="z8h-7Q-Rjz" firstAttribute="leading" secondItem="7uN-Q7-VJO" secondAttribute="leading" constant="24" id="oZR-TM-xuX"/>
-                            <constraint firstItem="7uN-Q7-VJO" firstAttribute="trailing" secondItem="z8h-7Q-Rjz" secondAttribute="trailing" constant="20" id="vQT-dJ-Hbu"/>
+                            <constraint firstItem="z8h-7Q-Rjz" firstAttribute="leading" secondItem="7uN-Q7-VJO" secondAttribute="leading" constant="8" id="oZR-TM-xuX"/>
+                            <constraint firstItem="7uN-Q7-VJO" firstAttribute="trailing" secondItem="z8h-7Q-Rjz" secondAttribute="trailing" constant="8" id="vQT-dJ-Hbu"/>
                             <constraint firstItem="pHM-VG-WFD" firstAttribute="leading" secondItem="7uN-Q7-VJO" secondAttribute="leading" constant="24" id="wfo-No-NLQ"/>
                             <constraint firstItem="obF-vC-9f1" firstAttribute="leading" secondItem="7uN-Q7-VJO" secondAttribute="leading" id="yL7-fF-wxp"/>
                         </constraints>
@@ -403,7 +384,7 @@ and you’ll be able to reset your password.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMa-sv-4iE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6157.971014492754" y="187.5"/>
+            <point key="canvasLocation" x="5248" y="166"/>
         </scene>
         <!--Working Place View Controller-->
         <scene sceneID="bk9-Ta-bNo">
@@ -599,17 +580,17 @@ and you’ll be able to reset your password.</string>
                     </view>
                     <navigationItem key="navigationItem" id="Nsn-SM-gC5"/>
                     <connections>
+                        <outlet property="addressLabel" destination="4Er-dE-T5J" id="Eee-VO-1Kx"/>
                         <outlet property="meetingPriceLabel" destination="XDA-Cq-tVe" id="53T-Rx-aF8"/>
                         <outlet property="nameLabel" destination="BU7-fB-GjK" id="Hn8-nQ-xH7"/>
                         <outlet property="normalPriceLabel" destination="0Y1-Ep-E50" id="oOk-Af-uyK"/>
                         <outlet property="priceButton" destination="6JL-dH-8TY" id="RB6-f3-yhJ"/>
                         <outlet property="smallPriceLabel" destination="u5v-Fx-82B" id="4PA-o3-p8Q"/>
-                        <outlet property="workingSpaceImage" destination="2C3-FW-UuO" id="7lo-mz-y9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-jb-YMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7121.739130434783" y="188.83928571428569"/>
+            <point key="canvasLocation" x="6229" y="396"/>
         </scene>
         <!--Find-->
         <scene sceneID="9R5-Uk-saJ">
@@ -626,16 +607,6 @@ and you’ll be able to reset your password.</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hxI-rp-Ccm">
                                 <rect key="frame" x="0.0" y="176" width="414" height="637"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dlK-JQ-fXo">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dlK-JQ-fXo" id="gdq-qu-8CU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eg5-bW-mHe"/>
