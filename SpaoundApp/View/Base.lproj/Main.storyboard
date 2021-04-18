@@ -365,9 +365,6 @@ and you’ll be able to reset your password.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="185" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <connections>
-                                            <segue destination="g1O-j3-hsX" kind="show" identifier="ShowDetails" id="9F3-Ir-LV5"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -411,31 +408,31 @@ and you’ll be able to reset your password.</string>
         <!--Working Place View Controller-->
         <scene sceneID="bk9-Ta-bNo">
             <objects>
-                <viewController id="g1O-j3-hsX" customClass="WorkingPlaceViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkingPlaceViewController" id="g1O-j3-hsX" customClass="WorkingPlaceViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OwD-XN-fXX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-FW-UuO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code-working-space-offices-hamburg-4" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-FW-UuO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="exq-s1-2fs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workspace Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU7-fB-GjK">
-                                <rect key="frame" x="20" y="378" width="204" height="33"/>
+                                <rect key="frame" x="20" y="334" width="204" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Er-dE-T5J">
-                                <rect key="frame" x="20" y="419" width="194" height="23.5"/>
+                                <rect key="frame" x="20" y="375" width="194" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JL-dH-8TY">
-                                <rect key="frame" x="294" y="388" width="100" height="30"/>
+                                <rect key="frame" x="294" y="344" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.92720365520000003" green="0.44774156809999999" blue="0.43135610219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="YEe-w8-3ic"/>
@@ -445,13 +442,13 @@ and you’ll be able to reset your password.</string>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgC-Bg-d4n">
-                                <rect key="frame" x="20" y="474.5" width="244" height="33"/>
+                                <rect key="frame" x="20" y="430.5" width="244" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="pDm-zl-Gzx">
-                                <rect key="frame" x="20" y="523.5" width="374" height="23.5"/>
+                                <rect key="frame" x="20" y="479.5" width="374" height="23.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comfort" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCP-gY-u7R">
                                         <rect key="frame" x="0.0" y="0.0" width="78" height="23.5"/>
@@ -474,7 +471,7 @@ and you’ll be able to reset your password.</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9a8-uB-O2r">
-                                <rect key="frame" x="20" y="563" width="374" height="23.5"/>
+                                <rect key="frame" x="20" y="519" width="374" height="23.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meeting Room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-UI-Knb">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="23.5"/>
@@ -491,13 +488,13 @@ and you’ll be able to reset your password.</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Prices" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJh-C0-tfC">
-                                <rect key="frame" x="20" y="618.5" width="244" height="33"/>
+                                <rect key="frame" x="20" y="574.5" width="244" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y1-Ep-E50">
-                                <rect key="frame" x="20" y="667.5" width="205" height="23.5"/>
+                                <rect key="frame" x="20" y="623.5" width="205" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="- L.E price/ ">
                                         <attributes>
@@ -513,7 +510,7 @@ and you’ll be able to reset your password.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDA-Cq-tVe">
-                                <rect key="frame" x="20" y="699" width="340" height="23.5"/>
+                                <rect key="frame" x="20" y="655" width="340" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="- L.E price/ ">
                                         <attributes>
@@ -529,7 +526,7 @@ and you’ll be able to reset your password.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5v-Fx-82B">
-                                <rect key="frame" x="20" y="730.5" width="317.5" height="23.5"/>
+                                <rect key="frame" x="20" y="686.5" width="317.5" height="23.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="- L.E price/ ">
                                         <attributes>
@@ -545,13 +542,13 @@ and you’ll be able to reset your password.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Times" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J77-rW-Ihq">
-                                <rect key="frame" x="20" y="785" width="244" height="33"/>
+                                <rect key="frame" x="20" y="741" width="244" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Days exepct Friday" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfZ-l4-TbG">
-                                <rect key="frame" x="20" y="826" width="199" height="23.5"/>
+                                <rect key="frame" x="20" y="782" width="199" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1273,6 +1270,7 @@ coming releases. Also there will be a lot of settings.</string>
     </scenes>
     <resources>
         <image name="Logo-Around-Outline" width="80" height="73"/>
+        <image name="code-working-space-offices-hamburg-4" width="1600" height="1067"/>
         <image name="house.circle.fill" catalog="system" width="128" height="121"/>
         <image name="image1" width="321" height="212"/>
         <image name="image2" width="298" height="259"/>

@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
         fetchRecommendedSpaces()
     }
     
+    //MARK:- Fetching functions
     func fetchPopularSpaces() {
         let url = Router.popularPlaces
         AF.request(url).responseDecodable { [weak self](response: (DataResponse<WorkingSpace, AFError>)) in
@@ -43,10 +44,9 @@ class HomeViewController: UIViewController {
         }
     }
 
-
     func fetchRecommendedSpaces() {
         let url = Router.recommendedPlaces
-            AF.request(url).responseDecodable { [weak self] (response: (DataResponse<WorkingSpace, AFError>)) in
+        AF.request(url).responseDecodable { [weak self] (response: (DataResponse<WorkingSpace, AFError>)) in
             switch response.result {
             case .success(let data):
                 self?.recommendedWorkingSpaces = data
@@ -84,22 +84,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Needs some work
-        navigationController?.pushViewController(WorkingPlaceViewController(), animated: true)
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "ShowDetails" {
-                let destination = segue.destination as! WorkingPlaceViewController
-                destination.nameLabel.text = ""
-                destination.priceButton.titleLabel?.text = ""
-                destination.workingSpaceImage.image = UIImage()
-                destination.normalPriceLabel.text = "" //Cell price
-                destination.meetingPriceLabel.text = "" //Cell price * 2
-                destination.smallPriceLabel.text = "" //Cell price * 0.8
-                
-            }
-        }
+        let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
+        destination.workingSpaceData = popularWorkingSpaces
+        destination.nameLabel.text = popularWorkingSpaces?.places[indexPath.row].name
+        destination.priceButton.titleLabel?.text = popularWorkingSpaces?.places[indexPath.row].address
+        
+        let price = Double(popularWorkingSpaces?.places[indexPath.row].price ?? 0)
+        destination.normalPriceLabel.text = String(format: "%.2f", "\(price)") //Cell price
+        destination.meetingPriceLabel.text = String(format: "%.2f", "\(price * 2)") //Cell price * 2
+        destination.smallPriceLabel.text = String(format: "%.2f", "\(price * 0.8)")//Cell price * 0.8
+
+        navigationController?.pushViewController(destination, animated: true)
+        
     }
 }
-
 
 //MARK:- CollectionView Functions
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -115,7 +113,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.priceLabel.text = "\(recommendedWorkingSpaces?.places[indexPath.row].price ?? 0)"
         cell.firstFeatureLabel.text = "Comfort"
         cell.secondFeatureLabel.text = "Comfort"
-    
+        
         return cell
     }
     

@@ -11,6 +11,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var workingSpaceData: WorkingSpace?
+    
     override func viewDidLoad() {
         searchBar.delegate = self
         tableView.delegate = self
@@ -22,6 +24,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
 
 }
+
+//MARK:- TableView Delegate & DataSource Functions
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,19 +41,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Needs some work
-        navigationController?.pushViewController(WorkingPlaceViewController(), animated: true)
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "ShowDetails" {
-                let destination = segue.destination as! WorkingPlaceViewController
-                destination.nameLabel.text = ""
-                destination.priceButton.titleLabel?.text = ""
-                destination.workingSpaceImage.image = UIImage()
-                destination.normalPriceLabel.text = "" //Cell price
-                destination.meetingPriceLabel.text = "" //Cell price * 2
-                destination.smallPriceLabel.text = "" //Cell price * 0.8
-                
-            }
-        }
+        
+        let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
+        
+        destination.nameLabel.text = workingSpaceData?.places[indexPath.row].name
+        destination.priceButton.titleLabel?.text = workingSpaceData?.places[indexPath.row].address
+        
+        let price = Double(workingSpaceData?.places[indexPath.row].price ?? 0)
+        destination.normalPriceLabel.text = String(format: "%.2f", "\(price)") //Cell price
+        destination.meetingPriceLabel.text = String(format: "%.2f", "\(price * 2)") //Cell price * 2
+        destination.smallPriceLabel.text = String(format: "%.2f", "\(price * 0.8)")//Cell price * 0.8
+
+        navigationController?.pushViewController(destination, animated: true)
     }
     
     

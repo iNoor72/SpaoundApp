@@ -32,6 +32,8 @@ class VerificationViewController: UIViewController {
         if let safeName = name, let safeEmail = email, let safePassword = password, let safeNumber = phoneNumber{
             //Use Firebase to verify using phone numbers
             
+            
+            //Create user to be stored
             let user = User(name: safeName, email: safeEmail, password: safePassword, phoneNumber: safeNumber)
             //realm.add(user)
             

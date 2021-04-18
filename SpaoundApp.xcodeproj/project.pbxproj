@@ -33,6 +33,7 @@
 		7C8D4552261CDF1100F468BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D4551261CDF1100F468BB /* ProfileViewController.swift */; };
 		7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3582E261E41C1003FF677 /* WorkingSpace.swift */; };
 		7CD245C826237FD700CB74DD /* WorkingPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD245C726237FD700CB74DD /* WorkingPlaceViewController.swift */; };
+		7CF09D12262CA6BA00E5E371 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF09D11262CA6BA00E5E371 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		7C8D4551261CDF1100F468BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7CA3582E261E41C1003FF677 /* WorkingSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSpace.swift; sourceTree = "<group>"; };
 		7CD245C726237FD700CB74DD /* WorkingPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingPlaceViewController.swift; sourceTree = "<group>"; };
+		7CF09D11262CA6BA00E5E371 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7C192ABB261CE383002432E5 /* Router.swift */,
+				7CF09D11262CA6BA00E5E371 /* Validator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				7C8D454F261CDF0800F468BB /* SearchViewController.swift in Sources */,
 				7C096C9E261B874E00AAE54B /* AppDelegate.swift in Sources */,
 				7CA3582F261E41C1003FF677 /* WorkingSpace.swift in Sources */,
+				7CF09D12262CA6BA00E5E371 /* Validator.swift in Sources */,
 				7C4562B8261BA0F2004550AF /* HomePageViewController.swift in Sources */,
 				7CD245C826237FD700CB74DD /* WorkingPlaceViewController.swift in Sources */,
 				7C49339D262A0D7500A8C3CC /* OnBoardingViewController3.swift in Sources */,
