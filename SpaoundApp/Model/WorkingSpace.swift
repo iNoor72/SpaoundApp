@@ -21,3 +21,4 @@ struct Place: Codable {
         case workingDays = "working_days"
     }
 }
+

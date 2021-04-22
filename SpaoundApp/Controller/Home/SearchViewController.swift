@@ -11,7 +11,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var workingSpaceData: Place?
     var matchingWorkingSpaces: WorkingSpace?
     
     override func viewDidLoad() {
@@ -20,19 +19,39 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
+        //Dismiss keyboard
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        if let allPlaces = matchingWorkingSpaces {
+            for index in 0...allPlaces.places.count-1{
+                if searchBar.text == allPlaces.places[index].name {
+                    tableView.cellForRow(at: IndexPath(item: 0, section: 0))
+                }
+            }
+        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         //Show the matching WorkingSpaces with the text in the searchBar
     }
-
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            
+        }
+        else {
+            
+        }
+    }
+    
 }
 
 //MARK:- TableView Delegate & DataSource Functions
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("\(matchingWorkingSpaces?.places.count ?? 0)")
         return matchingWorkingSpaces?.places.count ?? 0
     }
     
@@ -48,10 +67,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Needs some work
-        
         let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
-        destination.workingSpaceData = self.workingSpaceData
+        destination.workingSpaceData = self.matchingWorkingSpaces?.places[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
     }
     

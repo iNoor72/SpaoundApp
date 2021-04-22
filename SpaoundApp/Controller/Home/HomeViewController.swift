@@ -71,12 +71,15 @@ class HomeViewController: UIViewController {
     }
     
     func setAllWorkingSpacesData() {
+        
+        let searchTab = self.tabBarController?.viewControllers?[1] as! SearchViewController
+        searchTab.matchingWorkingSpaces = allWorkingSpaces
 //        guard allWorkingSpaces != nil else {
 //            return
 ////        }
-        let destination = storyboard?.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
-        destination.matchingWorkingSpaces = allWorkingSpaces
-        tabBarController?.present(destination, animated: true, completion: nil)
+//        let destination = storyboard?.instantiateViewController(identifier: "SearchViewController") as! SearchViewController
+//        destination.matchingWorkingSpaces = allWorkingSpaces
+//        tabBarController?.present(destination, animated: true, completion: nil)
 //        for i in 0...allWorkingSpaces.places.count-1 {
 //            print("\(allWorkingSpaces.places[i].name)")
 //        }

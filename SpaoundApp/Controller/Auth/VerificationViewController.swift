@@ -22,20 +22,23 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         createButton.layer.cornerRadius = 16.0
         firstDigit.delegate = self
-        //navigationController?.isNavigationBarHidden = false
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if firstDigit.text!.count == 1 {
-            //Go to the second textfield
+        if firstDigit.text?.count == 1{
+            return
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//
+//    }
 
     @IBAction func signUpTapped(_ sender: UIButton) {
         //implement the signup for user here with data passed from signup screen
