@@ -8,10 +8,13 @@
 import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
+    
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var matchingWorkingSpaces: WorkingSpace?
+    var allWorkingSpaces: WorkingSpace?
+    var filteredWorkingSpaces: WorkingSpace?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        if let allPlaces = matchingWorkingSpaces {
+        if let allPlaces = allWorkingSpaces {
             for index in 0...allPlaces.places.count-1{
                 if searchBar.text == allPlaces.places[index].name {
                     tableView.cellForRow(at: IndexPath(item: 0, section: 0))
@@ -33,16 +36,24 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        //Show the matching WorkingSpaces with the text in the searchBar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        filteredWorkingSpaces?.places.removeAll()
+        if let spaces = allWorkingSpaces?.places {
+            for place in spaces {
+                if place.name.lowercased() == searchText.lowercased(){
+                    filteredWorkingSpaces?.places.append(place)
+                }
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            
-        }
-        else {
-            
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     
@@ -52,23 +63,28 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matchingWorkingSpaces?.places.count ?? 0
+        if !(filteredWorkingSpaces?.places.isEmpty ?? true) {
+            return (filteredWorkingSpaces?.places.count)!
+        }
+        return allWorkingSpaces?.places.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath) as! CustomTableViewCell
         //Maybe using Realm to fetch data, or maybe using the API call again
         
-        cell.nameLabel.text = matchingWorkingSpaces?.places[indexPath.row].name
-        cell.addressLabel.text = matchingWorkingSpaces?.places[indexPath.row].address
-        cell.priceLabel.text = "\(matchingWorkingSpaces?.places[indexPath.row].price ?? 0)"
+        
+            cell.nameLabel.text = allWorkingSpaces?.places[indexPath.row].name
+            cell.addressLabel.text = allWorkingSpaces?.places[indexPath.row].address
+            cell.priceLabel.text = "\(allWorkingSpaces?.places[indexPath.row].price ?? 0)"
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destination = storyboard?.instantiateViewController(identifier: "WorkingPlaceViewController") as! WorkingPlaceViewController
-        destination.workingSpaceData = self.matchingWorkingSpaces?.places[indexPath.row]
+        destination.workingSpaceData = self.allWorkingSpaces?.places[indexPath.row]
         navigationController?.pushViewController(destination, animated: true)
     }
     

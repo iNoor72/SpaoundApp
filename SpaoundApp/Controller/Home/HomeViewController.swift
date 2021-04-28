@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
     func setAllWorkingSpacesData() {
         
         let searchTab = self.tabBarController?.viewControllers?[1] as! SearchViewController
-        searchTab.matchingWorkingSpaces = allWorkingSpaces
+        searchTab.allWorkingSpaces = allWorkingSpaces
 //        guard allWorkingSpaces != nil else {
 //            return
 ////        }
