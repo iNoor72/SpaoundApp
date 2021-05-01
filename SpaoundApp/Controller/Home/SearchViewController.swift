@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var allWorkingSpaces: WorkingSpace?
-    var filteredWorkingSpaces: WorkingSpace?
+    var filteredWorkingSpaces: [Place]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,49 +22,47 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
-        //Dismiss keyboard
-        searchBar.resignFirstResponder()
     }
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        if let allPlaces = allWorkingSpaces {
-            for index in 0...allPlaces.places.count-1{
-                if searchBar.text == allPlaces.places[index].name {
-                    tableView.cellForRow(at: IndexPath(item: 0, section: 0))
-                }
-            }
-        }
-    }
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        filteredWorkingSpaces?.places.removeAll()
-        if let spaces = allWorkingSpaces?.places {
-            for place in spaces {
-                if place.name.lowercased() == searchText.lowercased(){
-                    filteredWorkingSpaces?.places.append(place)
+        filteredWorkingSpaces?.removeAll()
+        if !searchText.isEmpty {
+            if let places = allWorkingSpaces?.places {
+            for place in places {
+                if searchText.lowercased() == place.name.lowercased() {
+                    filteredWorkingSpaces?.append(place)
                 }
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
             }
         }
     }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.showsCancelButton = false
+            searchBar.text = ""
+            searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
 //MARK:- TableView Delegate & DataSource Functions
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !(filteredWorkingSpaces?.places.isEmpty ?? true) {
-            return (filteredWorkingSpaces?.places.count)!
+        if !(filteredWorkingSpaces?.isEmpty ?? true) {
+            return (filteredWorkingSpaces?.count)!
         }
         return allWorkingSpaces?.places.count ?? 0
     }

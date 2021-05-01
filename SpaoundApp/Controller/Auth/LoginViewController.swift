@@ -38,11 +38,6 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
-        UserDefaults.standard.setValue(true, forKey: "isLoggedIn")
-    
-        //realm user to be signedIn
-        //realm.getObject().isLogged = true
     }
     
 

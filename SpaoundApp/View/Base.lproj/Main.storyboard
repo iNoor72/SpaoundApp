@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tei-or-va0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aEX-yj-VTf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -106,6 +106,7 @@
         <!--Verification View Controller-->
         <scene sceneID="uNx-Gb-ehi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQP-jL-GOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="VerificationViewController" id="aEX-yj-VTf" customClass="VerificationViewController" customModule="SpaoundApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pv5-a8-leK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -117,40 +118,12 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't your receive any code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-x2-cRV">
-                                <rect key="frame" x="75.5" y="381.5" width="263" height="27.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't your receive any code?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-x2-cRV">
+                                <rect key="frame" x="60" y="428.5" width="294" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="459-M6-MAS">
-                                <rect key="frame" x="40" y="289.5" width="334" height="60"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yll-67-QWp">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="326-Tp-AXC">
-                                        <rect key="frame" x="85" y="0.0" width="79" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09A-ol-hI8">
-                                        <rect key="frame" x="170" y="0.0" width="79" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="-" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP0-62-aZY">
-                                        <rect key="frame" x="255" y="0.0" width="79" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="hei-aj-RH8"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verfiy your phone number so our lovely spaces can contact you easily." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug5-t3-2ib">
                                 <rect key="frame" x="24" y="166.5" width="370" height="63"/>
                                 <constraints>
@@ -162,10 +135,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocM-Ko-ovh">
-                                <rect key="frame" x="145" y="429" width="124" height="39.5"/>
+                                <rect key="frame" x="60" y="476" width="294" height="39.5"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Re-send code">
+                                        <fragment content="Send another code">
                                             <attributes>
                                                 <color key="NSColor" red="0.078527174889999996" green="0.17404538389999999" blue="0.66670554879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <font key="NSFont" size="20" name="Avenir-Book"/>
@@ -174,6 +147,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="resendCodeTapped:" destination="aEX-yj-VTf" eventType="touchUpInside" id="ozs-MH-sZl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-Ey-qMD">
                                 <rect key="frame" x="16" y="816" width="382" height="36"/>
@@ -190,40 +166,88 @@
                                     <action selector="signUpTapped:" destination="aEX-yj-VTf" eventType="touchUpInside" id="nQX-qr-jSL"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-xA-Jdh" customClass="KKPinCodeTextField">
+                                <rect key="frame" x="24" y="289.5" width="366" height="49"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="digitsCount">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderHeight">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledDigitBorderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyDigitBorderColor">
+                                        <color key="value" red="0.095640830699999999" green="0.19401523470000001" blue="0.63925236460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bordersSpacing">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iql-is-mgP">
+                                <rect key="frame" x="20" y="362.5" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.095640830699999999" green="0.19401523470000001" blue="0.63925236460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendTapped:" destination="aEX-yj-VTf" eventType="touchUpInside" id="4Nx-9J-Txz"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Verifiction is correct! ✅" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhU-5S-Z7E">
+                                <rect key="frame" x="30" y="603" width="354" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="tTe-00-9Fr"/>
+                                </constraints>
+                                <color key="textColor" red="0.078527174889999996" green="0.17404538389999999" blue="0.66670554879999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="elg-0d-4yz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="459-M6-MAS" firstAttribute="centerX" secondItem="pv5-a8-leK" secondAttribute="centerX" id="7kX-Sc-i2s"/>
-                            <constraint firstItem="459-M6-MAS" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="40" id="A8i-Po-ku1"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="ocM-Ko-ovh" secondAttribute="trailing" constant="60" id="3hW-gR-o1d"/>
+                            <constraint firstItem="FWe-xA-Jdh" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="24" id="7zF-Od-UaR"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="EhU-5S-Z7E" secondAttribute="trailing" constant="30" id="8xz-k3-U73"/>
+                            <constraint firstItem="w2o-Ey-qMD" firstAttribute="top" secondItem="EhU-5S-Z7E" secondAttribute="bottom" constant="85" id="D67-Fa-yZS"/>
                             <constraint firstItem="9Mf-jo-ML2" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="24" id="EyO-mt-91G"/>
-                            <constraint firstItem="ocM-Ko-ovh" firstAttribute="centerX" secondItem="vbs-x2-cRV" secondAttribute="centerX" id="JIh-YS-FpX"/>
+                            <constraint firstItem="FWe-xA-Jdh" firstAttribute="top" secondItem="ug5-t3-2ib" secondAttribute="bottom" constant="60" id="Haj-j1-DhH"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="FWe-xA-Jdh" secondAttribute="trailing" constant="24" id="Iri-Si-Xeo"/>
+                            <constraint firstItem="iql-is-mgP" firstAttribute="top" secondItem="FWe-xA-Jdh" secondAttribute="bottom" constant="24" id="Ls4-nG-HfZ"/>
+                            <constraint firstItem="FWe-xA-Jdh" firstAttribute="centerX" secondItem="pv5-a8-leK" secondAttribute="centerX" id="MZx-2d-TxA"/>
                             <constraint firstItem="ug5-t3-2ib" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="24" id="PDA-Uv-twh"/>
                             <constraint firstItem="9Mf-jo-ML2" firstAttribute="top" secondItem="elg-0d-4yz" secondAttribute="top" constant="20" id="Ptd-dT-aCg"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="vbs-x2-cRV" secondAttribute="trailing" constant="60" id="QMi-KA-lGX"/>
                             <constraint firstItem="elg-0d-4yz" firstAttribute="bottom" secondItem="w2o-Ey-qMD" secondAttribute="bottom" constant="10" id="Qvy-RX-M75"/>
                             <constraint firstItem="ug5-t3-2ib" firstAttribute="top" secondItem="9Mf-jo-ML2" secondAttribute="bottom" constant="20" id="WZj-sk-xB9"/>
-                            <constraint firstItem="vbs-x2-cRV" firstAttribute="top" secondItem="459-M6-MAS" secondAttribute="bottom" constant="32" id="We3-t1-w54"/>
+                            <constraint firstItem="vbs-x2-cRV" firstAttribute="top" secondItem="iql-is-mgP" secondAttribute="bottom" constant="30" id="XSi-P5-SlP"/>
                             <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="w2o-Ey-qMD" secondAttribute="trailing" constant="16" id="ZSr-FY-MqZ"/>
-                            <constraint firstItem="ocM-Ko-ovh" firstAttribute="top" secondItem="vbs-x2-cRV" secondAttribute="bottom" constant="20" id="bEn-2z-46j"/>
-                            <constraint firstItem="vbs-x2-cRV" firstAttribute="centerX" secondItem="459-M6-MAS" secondAttribute="centerX" id="bWH-eV-LIo"/>
-                            <constraint firstItem="459-M6-MAS" firstAttribute="top" secondItem="ug5-t3-2ib" secondAttribute="bottom" constant="60" id="duO-KL-oFh"/>
+                            <constraint firstItem="EhU-5S-Z7E" firstAttribute="centerX" secondItem="pv5-a8-leK" secondAttribute="centerX" id="cOi-ks-miq"/>
                             <constraint firstItem="w2o-Ey-qMD" firstAttribute="centerX" secondItem="pv5-a8-leK" secondAttribute="centerX" id="e1g-X5-9eq"/>
+                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="iql-is-mgP" secondAttribute="trailing" constant="20" id="eNt-61-hgQ"/>
+                            <constraint firstItem="EhU-5S-Z7E" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="30" id="hbu-1l-4g1"/>
+                            <constraint firstItem="ocM-Ko-ovh" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="60" id="iNj-Wr-moQ"/>
+                            <constraint firstItem="vbs-x2-cRV" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="60" id="ljR-AY-UVt"/>
+                            <constraint firstItem="iql-is-mgP" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="20" id="m44-hj-PFh"/>
                             <constraint firstItem="w2o-Ey-qMD" firstAttribute="leading" secondItem="elg-0d-4yz" secondAttribute="leading" constant="16" id="mLQ-2z-LkG"/>
-                            <constraint firstItem="elg-0d-4yz" firstAttribute="trailing" secondItem="459-M6-MAS" secondAttribute="trailing" constant="40" id="v36-so-0jr"/>
+                            <constraint firstItem="ocM-Ko-ovh" firstAttribute="top" secondItem="vbs-x2-cRV" secondAttribute="bottom" constant="20" id="wcR-8C-dzJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g9c-Hv-43s"/>
                     <connections>
                         <outlet property="createButton" destination="w2o-Ey-qMD" id="QBO-DH-FZq"/>
-                        <outlet property="firstDigit" destination="Yll-67-QWp" id="HYB-UB-L0M"/>
-                        <outlet property="fourthDigit" destination="AP0-62-aZY" id="iRv-S0-As2"/>
-                        <outlet property="secondDigit" destination="326-Tp-AXC" id="QvB-Fs-tVz"/>
-                        <outlet property="thirdDigit" destination="09A-ol-hI8" id="WTo-ie-zaJ"/>
+                        <outlet property="phoneTextField" destination="FWe-xA-Jdh" id="Psh-to-q23"/>
+                        <outlet property="verficationView" destination="EhU-5S-Z7E" id="yTV-3t-0Gj"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tQP-jL-GOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2257" y="1477"/>
+            <point key="canvasLocation" x="2256.521739130435" y="1476.5625"/>
         </scene>
         <!--Password Reset View Controller-->
         <scene sceneID="MCG-d0-oGL">
@@ -1239,6 +1263,11 @@ coming releases. Also there will be a lot of settings.</string>
             <point key="canvasLocation" x="-380" y="-340"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="FWe-xA-Jdh">
+            <size key="intrinsicContentSize" width="26" height="49"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Logo-Around-Outline" width="80" height="73"/>
         <image name="code-working-space-offices-hamburg-4" width="1600" height="1067"/>
