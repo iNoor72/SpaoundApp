@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         emailTextField.layer.cornerRadius = 16.0
         passwordTextField.layer.cornerRadius = 16.0
         loginButton.layer.cornerRadius = 16.0
-        //navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
     
     
@@ -37,6 +37,9 @@ class LoginViewController: UIViewController {
                     return
                 }
             }
+            
+            //get username with the email from Realm database
+            //present the navController and pass the name
         }
     }
     

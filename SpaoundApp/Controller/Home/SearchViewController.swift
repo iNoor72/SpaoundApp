@@ -30,7 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if !searchText.isEmpty {
             if let places = allWorkingSpaces?.places {
             for place in places {
-                if searchText.lowercased() == place.name.lowercased() {
+                if searchBar.text?.lowercased() == place.name.lowercased() {
                     filteredWorkingSpaces?.append(place)
                 }
             }
@@ -62,21 +62,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if !(filteredWorkingSpaces?.isEmpty ?? true) {
+            print(filteredWorkingSpaces?.count)
             return (filteredWorkingSpaces?.count)!
         }
+        print(allWorkingSpaces?.places.count)
         return allWorkingSpaces?.places.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath) as! CustomTableViewCell
         //Maybe using Realm to fetch data, or maybe using the API call again
-        
-        
             cell.nameLabel.text = allWorkingSpaces?.places[indexPath.row].name
             cell.addressLabel.text = allWorkingSpaces?.places[indexPath.row].address
             cell.priceLabel.text = "\(allWorkingSpaces?.places[indexPath.row].price ?? 0)"
-        
-        
         return cell
     }
     

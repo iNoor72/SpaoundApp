@@ -16,6 +16,7 @@ class OnBoardingViewController3: UIViewController {
     }
     @IBAction func getStartedTapped(_ sender: UIButton) {
         let destination = storyboard?.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController
+        self.navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(destination, animated: true)
     }
 }

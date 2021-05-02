@@ -12,13 +12,18 @@ class HomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         loginButton.layer.cornerRadius = 16.0
+//        navigationController?.navigationBar.isHidden = true
     }
     
-    
-
+    @IBAction func loginTapped(_ sender: UIButton) {
+        let destination = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginViewController
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    @IBAction func registerTapped(_ sender: UIButton) {
+        let destination = storyboard?.instantiateViewController(identifier: "RegisterVC") as! SignUpViewController
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(destination, animated: true)
+    }
 }

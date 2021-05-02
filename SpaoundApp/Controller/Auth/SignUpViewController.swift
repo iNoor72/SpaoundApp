@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
         phoneNumberTextField.layer.cornerRadius = 16.0
         passwordTextField.layer.cornerRadius = 16.0
         nextButton.layer.cornerRadius = 16.0
-        //navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
     
     //It works, need to check for empty fields.

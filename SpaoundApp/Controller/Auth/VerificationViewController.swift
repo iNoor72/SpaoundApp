@@ -65,12 +65,20 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
                             }
                         } else {
                             print(error.localizedDescription)
+                            self.verficationView.text = "Verification is incorrect. Try Again."
+                            self.verficationView.isHidden = false
                             return
                         }
                         return
                     }
                 }
                 Auth.auth().createUser(withEmail: safeEmail, password: safePassword, completion: nil)
+                self.verficationView.isHidden = false
+                
+                let destination = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                //destination.username = username from Realm
+                self.navigationController?.isNavigationBarHidden = true
+                self.navigationController?.present(destination, animated: true, completion: nil)
             }
         }
     }

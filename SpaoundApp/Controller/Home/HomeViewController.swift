@@ -16,13 +16,14 @@ class HomeViewController: UIViewController {
     var popularWorkingSpaces : WorkingSpace?
     var recommendedWorkingSpaces : WorkingSpace?
     var allWorkingSpaces: WorkingSpace = WorkingSpace(places: [Place]())
+    var username: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "TVCell")
         collectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CVCell")
         navigationController?.isNavigationBarHidden = true
-        
+        //usernameLabel.text = username
         fetchPopularSpaces()
         fetchRecommendedSpaces()
         //setAllWorkingSpacesData()

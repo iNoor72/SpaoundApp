@@ -15,6 +15,7 @@ class OnBoardingViewController2: UIViewController {
 
     @IBAction func skipTapped(_ sender: UIBarButtonItem) {
         let destination = storyboard?.instantiateViewController(identifier: "HomePageVC") as! HomePageViewController
+        self.navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(destination, animated: true)
     }
 }
