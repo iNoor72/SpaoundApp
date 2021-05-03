@@ -16,6 +16,12 @@ class HomePageViewController: UIViewController {
 //        navigationController?.navigationBar.isHidden = true
     }
     
+    //Hiding the NavBar if it's not needed, write it down in ViewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     @IBAction func loginTapped(_ sender: UIButton) {
         let destination = storyboard?.instantiateViewController(identifier: "LoginVC") as! LoginViewController
         self.navigationController?.isNavigationBarHidden = true

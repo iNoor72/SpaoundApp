@@ -14,7 +14,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var allWorkingSpaces: WorkingSpace?
-    var filteredWorkingSpaces: [Place]?
+    var filteredWorkingSpaces = [Place]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
-        filteredWorkingSpaces?.removeAll()
+        filteredWorkingSpaces.removeAll()
         if !searchText.isEmpty {
             if let places = allWorkingSpaces?.places {
             for place in places {
                 if searchBar.text?.lowercased() == place.name.lowercased() {
-                    filteredWorkingSpaces?.append(place)
+                    filteredWorkingSpaces.append(place)
                 }
             }
         }
@@ -61,20 +61,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !(filteredWorkingSpaces?.isEmpty ?? true) {
-            print(filteredWorkingSpaces?.count)
-            return (filteredWorkingSpaces?.count)!
-        }
-        print(allWorkingSpaces?.places.count)
-        return allWorkingSpaces?.places.count ?? 0
+        return filteredWorkingSpaces.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath) as! CustomTableViewCell
         //Maybe using Realm to fetch data, or maybe using the API call again
-            cell.nameLabel.text = allWorkingSpaces?.places[indexPath.row].name
-            cell.addressLabel.text = allWorkingSpaces?.places[indexPath.row].address
-            cell.priceLabel.text = "\(allWorkingSpaces?.places[indexPath.row].price ?? 0)"
+            cell.nameLabel.text = filteredWorkingSpaces[indexPath.row].name
+            cell.addressLabel.text = filteredWorkingSpaces[indexPath.row].address
+            cell.priceLabel.text = "\(filteredWorkingSpaces[indexPath.row].price ?? 0)"
         return cell
     }
     

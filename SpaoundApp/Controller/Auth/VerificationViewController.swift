@@ -50,7 +50,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
                 
                 UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
                 let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
-                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID ?? "", verificationCode: "")
+                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID ?? "", verificationCode: self.phoneTextField.text ?? "000000")
 
                 Auth.auth().signIn(with: credential) { (authResult, error) in
                     if let error = error {
