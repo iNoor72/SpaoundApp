@@ -30,7 +30,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         if !searchText.isEmpty {
             if let places = allWorkingSpaces?.places {
             for place in places {
-                if searchBar.text?.lowercased() == place.name.lowercased() {
+                if place.name.lowercased().contains(searchBar.text?.lowercased() ?? "") {
                     filteredWorkingSpaces.append(place)
                 }
             }
